@@ -5,9 +5,9 @@ import { ALL_ANIMALS } from '../data/animals';
 import type { Animal } from '../types';
 
 export function SelectAnimalsScreen() {
-  const { bingoSize, setSize, confirmAnimals } = useGameStore(s => ({
+  const { bingoSize, resetGame, confirmAnimals } = useGameStore(s => ({
     bingoSize: s.bingoSize,
-    setSize: s.setSize,
+    resetGame: s.resetGame,
     confirmAnimals: s.confirmAnimals,
   }));
   const need = bingoSize ?? 9;
@@ -41,7 +41,7 @@ export function SelectAnimalsScreen() {
       <div className="sticky top-0 z-10 px-4 py-3 flex items-center gap-3 shadow-sm"
         style={{ background: '#FFF9F0' }}>
         <button
-          onClick={() => setSize(bingoSize!)}
+          onClick={() => resetGame()}
           className="text-zoo-primary text-sm font-bold px-3 py-1 rounded-full border border-zoo-primary/40 active:scale-95 transition-transform"
         >
           ‹ もどる
