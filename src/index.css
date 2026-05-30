@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-bg:        #FFF9F0;
+  --color-primary:   #4CAF50;
+  --color-secondary: #FF9800;
+  --color-accent:    #E91E8C;
+  --color-found:     #81C784;
+  --color-line:      #FFD700;
+  --color-text:      #3E2723;
+  --color-card-bg:   #FFFFFF;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #FFF9F0;
+  font-family: 'Zen Maru Gothic', sans-serif;
+}
+
+#root {
+  min-height: 100svh;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
