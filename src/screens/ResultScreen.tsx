@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { useGameStore } from '../store/gameStore';
 import { getCompletedLineIndices } from '../utils/bingo';
 import { captureAndShare } from '../utils/screenshot';
+import { KofiButton } from '../components/KofiButton';
 
 export function ResultScreen() {
   const { cells, gridSize, completedLines, resetGame } = useGameStore(s => ({
@@ -121,6 +122,8 @@ export function ResultScreen() {
           🔄 もういちどあそぶ！
         </motion.button>
       </div>
+
+      <KofiButton />
     </motion.div>
   );
 }

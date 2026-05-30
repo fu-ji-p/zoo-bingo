@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import type { BingoSize } from '../types';
 import { useGameStore } from '../store/gameStore';
+import { KofiButton } from '../components/KofiButton';
 
 const DECO_EMOJIS = ['🦁', '🐘', '🦒', '🐼', '🐧', '🦜', '🐢', '🦊', '🦋', '🌿'];
 
@@ -81,6 +82,8 @@ export function SelectSizeScreen() {
       <p className="mt-10 text-zoo-text/40 text-sm">
         🌿 どうぶつえんで あそぼう！
       </p>
+
+      <KofiButton />
     </motion.div>
   );
 }
